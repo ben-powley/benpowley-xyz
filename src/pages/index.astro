@@ -1,7 +1,54 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { FaLinkedin, FaGithub } from "react-icons/fa6";
 ---
 
 <Layout title="Ben Powley - Home">
-  <main></main>
+  <main>
+    <div
+      class="flex flex-col lg:flex-row justify-center items-center lg:justify-between min-h-screen lg:px-16 xl:px-40"
+    >
+      <div class="font-bold order-2 lg:order-1 lg:mt-0 mt-4">
+        <h1 class="text-4xl lg:text-6xl xl:text-7xl">Ben Powley.</h1>
+        <h3 class="opacity-60 text-xl lg:text-2xl xl:text-4xl lg:ml-1 xl:ml-2">
+          Full Stack Web Developer.
+        </h3>
+        <div class="xl:ml-2 mt-4 flex items-center gap-4">
+          <a
+            class="flex hover:-translate-y-1 transition-transform"
+            href="https://github.com/ben-powley"
+            title="Ben Powley - GitHub"
+          >
+            <FaGithub className="size-8" />
+          </a>
+
+          <a
+            class="flex hover:-translate-y-1 transition-transform"
+            href="https://www.linkedin.com/in/ben-powley-b48426138/"
+            title="Ben Powley - LinkedIn"
+          >
+            <FaLinkedin className="fill-[#0072b1] size-8" />
+          </a>
+        </div>
+      </div>
+
+      <div class="relative order-1 lg:order-2">
+        <div
+          class="rounded-full size-64 lg:size-80 xl:size-96 absolute inset-0 top-1/2 -translate-y-1/2 bg-purple-500 -translate-x-8 -z-20 blur-3xl animate-customPulse"
+        >
+        </div>
+
+        <img
+          class="rounded-full size-64 lg:size-80 xl:size-96 z-10 relative shadow-lg"
+          src="ben-photo.JPG"
+          alt="Ben Powley"
+        />
+
+        <div
+          class="rounded-full size-64 lg:size-80 xl:size-96 absolute inset-0 top-1/2 -translate-y-1/2 bg-blue-500 left-24 -z-20 blur-3xl animate-customPulse"
+        >
+        </div>
+      </div>
+    </div>
+  </main>
 </Layout>
