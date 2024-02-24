@@ -1,4 +1,7 @@
 ---
+import { Picture } from "astro:assets";
+import benImage from "@/assets/images/ben-photo.jpg";
+
 import Layout from "../layouts/Layout.astro";
 import { FaLinkedin, FaGithub } from "react-icons/fa6";
 ---
@@ -42,10 +45,11 @@ import { FaLinkedin, FaGithub } from "react-icons/fa6";
         >
         </div>
 
-        <img
+        <Picture
           class="rounded-full size-64 lg:size-80 xl:size-96 z-10 relative shadow-lg"
-          src="ben-photo.JPG"
-          alt="Ben Powley"
+          src={benImage}
+          formats={["avif", "webp"]}
+          alt={"Ben Powley"}
         />
 
         <div
