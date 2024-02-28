@@ -1,9 +1,12 @@
 ---
+import { getCollection } from "astro:content";
 import { Picture } from "astro:assets";
 import benImage from "@/assets/images/ben-photo.jpg";
 
 import Layout from "../layouts/Layout.astro";
 import { FaLinkedin, FaGithub } from "react-icons/fa6";
+
+const experience = await getCollection('experience');
 ---
 
 <Layout title="Ben Powley - Home">
@@ -57,6 +60,13 @@ import { FaLinkedin, FaGithub } from "react-icons/fa6";
           class="rounded-full size-64 lg:size-80 xl:size-96 absolute inset-0 top-1/2 -translate-y-1/2 bg-blue-500 left-24 -z-20 blur-3xl animate-customPulse"
         >
         </div>
+      </div>
+    </div>
+
+    <div>
+      <div>Experience</div>      
+      <div>
+        {experience.map(exp => <div>{exp.data.companyName}</div>)}
       </div>
     </div>
   </main>
